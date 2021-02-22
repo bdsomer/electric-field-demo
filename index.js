@@ -199,7 +199,6 @@ function onCanvasClick(event) {
 		}
 	}
 }
-
 const chargeInput = document.getElementById('chargeInput')
 const arrowFrequencyInput = document.getElementById('arrowFrequencyInput')
 const dsInput = document.getElementById('dsInput')
@@ -259,6 +258,7 @@ function sizeCanvas() {
 function preset(newCharges, newArrowIncrement, newDs, newMaxIterations) {
 	charges = newCharges
 	currentChargeEditing = charges.length - 1
+	updateEditingDiv()
 
 	arrowIncrement = newArrowIncrement
 	arrowFrequencyInput.value = arrowIncrement
