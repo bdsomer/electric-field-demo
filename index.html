@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Electric Field Demo</title>
+		<meta charset="UTF-8">
+		<style>*{margin:0;padding:0;}#c{position:absolute;}#d{position:absolute;left:80%;width:20%;overflow-wrap:break-word;}.withPadding{margin:5px;}</style>
+	</head>
+	<body>
+		<canvas id="c">This electric field demo requires that your browser support HTML5 canvas.</canvas>
+		<div id="d">
+			<div class="withPadding">
+				<p>Left click to add a charge and edit its properties. Right click a charge to edit its properties. The charge you are currently editing will be outlined by a thin black circumference.</p>
+				<br />
+				<h2>
+					Charge settings
+				</h2>
+				<label for="chargeInput">Charge magnitude</label>
+				<input type="text" id="chargeInput" />
+				<br /><br />
+
+				<h2>
+					Simulation settings
+				</h2>
+				<label for="arrowFrequencyInput">Arrow frequency</label>
+				<input type="text" id="arrowFrequencyInput" />
+				<br /><br />
+				<label for="dsInput">ds (higher values improve performance and require lower arrow frequency)</label>
+				<input type="text" id="dsInput" />
+				<br /><br />
+				<label for="maxIterationsInput">Maximum iterations per field line (lower values improve performance)</label>
+				<input type="text" id="maxIterationsInput" />
+				<br /><br />
+				<button id="saveButton">Save charge settings and simulation settings</button>
+				<br /><br />
+
+				<h2>
+					Presets
+				</h2>
+				<button id="presetPointCharge">Point charge</button>
+				<button id="presetLines">Lines of charges (this may take some time to load!)</button>
+				<button id="presetEqualMagnitudeOppositeSign">Two charges of equal magnitude and opposite sign</button>
+				<button id="presetEqualMagnitudeSameSign">Two charges of equal magnitude and same sign</button>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>
